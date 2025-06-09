@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Repentance",
+    "description": "Psalms expressing contrition and plea for mercy"
+  },
+  {
+    "id": 2,
+    "name": "Thanksgiving",
+    "description": "Psalms of gratitude"
+  },
+  {
+    "id": 3,
+    "name": "Joy",
+    "description": "Psalms for times of joy"
+  },
+  {
+    "id": 4,
+    "name": "Despair",
+    "description": "Psalms for times of despair"
+  }
+]
+

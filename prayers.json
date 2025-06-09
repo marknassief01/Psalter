@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "title": "Prayer of Repentance by St. Ephraim",
+    "text": "O Lord and Master of my life, take from me the spirit of sloth...",
+    "categoryIDs": [1]
+  },
+  {
+    "id": 2,
+    "title": "Midnight Prayer from the Agpeya",
+    "text": "Arise, O children of the light, let us praise the Lord of hosts...",
+    "categoryIDs": [1, 4]
+  }
+]
+

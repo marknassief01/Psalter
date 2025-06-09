@@ -1,0 +1,46 @@
+/*
+ [
+  {
+    "id": 50,
+    "title": "Psalm 50 (51)",
+    "text": "Have mercy on me, O God, according to Your great mercy...",
+    "categoryIDs": [1]
+  },
+  {
+    "id": 150,
+    "title": "Psalm 150",
+    "text": "Praise the Lord! Praise God in His saints...",
+    "categoryIDs": [2, 3]
+  }
+]
+
+[
+import json
+
+# Raw psalm data input by the user
+raw_psalms = {
+    1: "1 Blessed is the man who has not walked in the counsel of the ungodly, and has not stood in the way of sinners, and has not sat in the seat of evil men. 2 But his pleasure is in the law of the Lord; and in his law will he meditate day and night. 3 And he shall be as a tree planted by the brooks of waters, which shall yield its fruit in its season, and its leaf shall not fall off; and whatsoever he shall do shall be prospered. 4 Not so the ungodly;-- not so: but rather as the chaff which the wind scatters away from the face of the earth. 5 Therefore the ungodly shall not rise in judgment, nor sinners in the counsel of the just. 6 For the Lord knows the way of the righteous; but the way of the ungodly shall perish.",
+    2: "1 Wherefore did the heathen rage, and the nations imagine vain things? 2 The kings of the earth stood up, and the rulers gathered themselves together, against the Lord, and against his Christ; 3 [saying], Let us break through their bonds, and cast away their yoke from us. 4 He that dwells in the heavens shall laugh them to scorn, and the Lord shall mock them. 5 Then shall he speak to them in his anger, and trouble them in his fury. 6 But I have been made king by him on Sion his holy mountain, 7 declaring the ordinance of the Lord: the Lord said to me, Thou art my Son, to-day have I begotten thee. 8 Ask of me, and I will give thee the heathen [for] thine inheritance, and the ends of the earth [for] thy possession. 9 Thou shalt rule them with a rod of iron; thou shalt dash them in pieces as a potter’s vessel. 10 Now therefore understand, ye kings: be instructed, all ye that judge the earth. 11 Serve the Lord with fear, and rejoice in him with trembling. 12 Accept correction, lest at any time the Lord be angry, and ye should perish from the righteous way: 13 whensoever his wrath shall be suddenly kindled, blessed are all they that trust in him.",
+    3: "1 [A Psalm of David, when he fled from the presence of his son Abessalom.] 2 O Lord, why are they that afflict me multiplied? many rise up against me. 3 Many say concerning my soul, There is no deliverance for him in his God. Pause. 4 But thou, O Lord, art my helper: my glory, and the one that lifts up my head. 5 I cried to the Lord with my voice, and he heard me out of his holy mountain. Pause. 6 I lay down and slept; I awaked; for the Lord will help me. 7 I will not be afraid of ten thousands of people, who beset me round about. 8 Arise, Lord; deliver me, my God: for thou hast smitten all who were without cause mine enemies; thou hast broken the teeth of sinners. 9 Deliverance is the Lord’s, and thy blessing is upon thy people.",
+    4: "1 [For the End, a Song of David among [the] Psalms.] 2 When I called upon [him], the God of my righteousness heard me: thou hast made room for me in tribulation; pity me, and hearken to my prayer. 3 O ye sons of men, how long [will ye be] slow of heart? wherefore do ye love vanity, and seek falsehood? Pause. 4 But know ye that the Lord has done wondrous things for his holy one: the Lord will hear me when I cry to him. 5 Be ye angry, and sin not; feel compunction upon your beds for what ye say in your hearts. Pause. 6 Offer the sacrifice of righteousness, and trust in the Lord. 7 Many say, Who will shew us good things? the light of thy countenance, O Lord, has been manifested towards us. 8 Thou hast put gladness into my heart: they have been satisfied with the fruit of their corn and wine and oil. 9 I will both lie down in peace and sleep: for thou, Lord, only hast caused me to dwell securely.",
+    5: "1 [For the end, a Psalm of David, concerning her that inherits.] 2 Hearken to my words, O Lord, attend to my cry. 3 Attend to the voice of my supplication, my King, and my God: for to thee, O Lord, will I pray. 4 In the morning thou shalt hear my voice: in the morning will I wait upon thee, and will look up. 5 For thou art not a God that desires iniquity; neither shall the worker of wickedness dwell with thee. 6 Neither shall the transgressors continue in thy sight: thou hatest, O Lord, all them that work iniquity. 7 Thou wilt destroy all that speak falsehood: the Lord abhors the bloody and deceitful man. 8 But I will enter into thine house in the multitude of thy mercy: I will worship in thy fear toward thy holy temple. 9 Lead me, O Lord, in thy righteousness because of mine enemies; make my way plain before thy face. 10 For there is no truth in their mouth; their heart is vain; their throat is an open sepulchre; with their tongues they have used deceit. 11 Judge them, O God; let them fail of their counsels: cast them out according to the abundance of their ungodliness; for they have provoked thee, O Lord. 12 But let all that trust on thee be glad in thee: they shall exult for ever, and thou shalt dwell among them; and all that love thy name shall rejoice in thee. 13 For thou, Lord, shalt bless the righteous: thou hast compassed us as with a shield of favour."
+}
+
+# Format for JSON
+json_data = []
+for psalm_id, text in raw_psalms.items():
+    json_data.append({
+        "id": psalm_id,
+        "title": f"Psalm {psalm_id}",
+        "text": text,
+        "categoryIDs": []
+    })
+
+# Save to JSON file
+output_path = "/mnt/data/psalms.json"
+with open(output_path, "w") as f:
+    json.dump(json_data, f, indent=2)
+
+output_path
+]
+*/
